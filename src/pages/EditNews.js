@@ -32,7 +32,7 @@ function EditNews() {
         },
         newsid : params.newsid
       };
-      await axios.post("http://localhost:5000/api/newsitems/editnewsitem", payload);
+      await axios.post("https://demo-news-app.herokuapp.com/api/newsitems/editnewsitem", payload);
       setLoading(false);
       toast("News edited successfully", "success");
       navigate("/home");
@@ -46,7 +46,7 @@ function EditNews() {
   const getData = async () => {
     setLoading(true);
     try {
-      const result = await axios.post("http://localhost:5000/api/newsitems/getnewsitembyid", {
+      const result = await axios.post("https://demo-news-app.herokuapp.com/api/newsitems/getnewsitembyid", {
         newsid: params.newsid,
       });
       setTitle(result.data.title)
