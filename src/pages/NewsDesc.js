@@ -12,7 +12,7 @@ function NewsDesc() {
   const getData = async () => {
     setLoading(true);
     try {
-      const result = await axios.post("/api/newsitems/getnewsitembyid", { newsid: params.newsid });
+      const result = await axios.post("https://demo-news-app.herokuapp.comapi/newsitems/getnewsitembyid", { newsid: params.newsid });
       setNewsItem(result.data);
       setLoading(false);
 
