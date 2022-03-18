@@ -12,7 +12,7 @@ function HomePage() {
   const getData = async () => {
     setLoading(true);
     try {
-      const result = await axios.get("http://localhost:5000/api/newsitems/getallnewsitems");
+      const result = await axios.get("https://demo-news-app.herokuapp.com/api/newsitems/getallnewsitems");
       setLoading(false);
       setNewsItems(result.data);
     } catch (error) {
