@@ -33,7 +33,7 @@ function AddNews() {
           email : user.email
         },
       };
-      await axios.post("http://localhost:5000/api/newsitems/addnewsitem", payload);
+      await axios.post("https://demo-news-app.herokuapp.com/api/newsitems/addnewsitem", payload);
       setLoading(false)
       toast('News added successfully' , 'success')
       navigate('/home')
