@@ -13,7 +13,7 @@ function PostedNewsItems() {
   const getData = async () => {
     setLoading(true);
     try {
-      const result = await axios.post("http://localhost:5000/api/newsitems/getnewsitemsbyuserid", {
+      const result = await axios.post("https://demo-news-app.herokuapp.com/api/newsitems/getnewsitemsbyuserid", {
         userid: user._id,
       });
       setLoading(false);
@@ -31,7 +31,7 @@ function PostedNewsItems() {
   const deleteItem = async (newsid) => {
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/newsitems/deletenewsitem", {
+      await axios.post("https://demo-news-app.herokuapp.com/api/newsitems/deletenewsitem", {
         newsid,
       });
       getData()
