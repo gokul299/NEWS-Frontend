@@ -19,7 +19,7 @@ function LandingPage() {
         email,
         password,
       };
-      const result = await axios.post("/api/users/login", payload);
+      const result = await axios.post("https://demo-news-app.herokuapp.com/api/users/login", payload);
       console.log(result.data);
       toast("Login Successfull");
       localStorage.setItem("sheynews-user", JSON.stringify(result.data));
@@ -39,7 +39,7 @@ function LandingPage() {
         password,
         name,
       };
-      await axios.post("/api/users/register", payload);
+      await axios.post("https://demo-news-app.herokuapp.com/api/users/register", payload);
       toast("Registration successfull , Please login");
       setName("");
       setEmail("");
